@@ -1,0 +1,192 @@
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html *::selection {
+    background: #1F1A14;
+    color: #B7A58B
+}
+
+html *::-webkit-selection {
+    background: #1F1A14;
+    color: #B7A58B
+}
+
+html *::-moz-selection {
+    background: #1F1A14;
+    color: #B7A58B
+}
+
+body,
+html,
+.__root {
+    height: 100%
+}
+
+html {
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden
+}
+
+html,
+html body {
+    background: #C4C4C4;
+}
+
+
+body {
+    font-size: 16px;
+    line-height: 1.1;
+    -webkit-text-size-adjust: none;
+    color: #1F1A14;
+    margin: 0;
+    font-family: 'Chillax', sans-serif;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+svg,
+video,
+figure {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+.container {
+    padding: 0 clamp(40px, 5vw, 6rem);
+}
+
+.flex {
+    display: flex;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.flex-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.justify-space {
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    transition: transform 200ms ease;
+    cursor: pointer;
+}
+.button_line {
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #000;
+}
+.button:active {
+    transform: scale(.95);
+}
+
+
+/* Header */
+header {
+    padding: clamp(20px, 1vw, 2rem) 0;
+}
+
+header,
+header h1 {
+    color: #000;
+    font-size: .85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+header > div {
+    gap: 2rem;
+}
+header .logo-line {
+    border-bottom: 1.5px solid #3E3428;
+    width: 100%;
+}
+
+/* Main */
+main {
+    height: 100%;
+    padding-bottom: 2rem;
+}
+main .content {
+    height: 100%;
+    text-transform: uppercase;
+}
+main .content > * {
+    flex: 1 0 0;
+}
+main .menu,
+main .scroll-ind {
+    justify-content: end;
+}
+main .scroll-ind {
+    align-items: end;
+}
+main .menu ul {
+    list-style: none;
+    font-size: .85rem;
+    font-weight: 500;
+    gap: .5rem;
+}
+main .scroll-ind .scroll {
+    border: 1px solid #1F1A14;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: .75rem;
+    font-weight: 500;
+}
+main .content .cover {
+    position: relative;
+    flex: 50%;
+}
+main .content .cover .text {
+    height: 100%;
+}
+main .content .cover .preview {
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+}
+main .content .cover .text h1 {
+    color: #C4C4C4;
+    font-size: 10.5rem;
+    font-weight: 400;
+    letter-spacing: -0.84rem;
+    mix-blend-mode: difference;
+    z-index: 1;
+}
+main .content .cover .text h1.text-bottom {
+    text-align: right;
+}
