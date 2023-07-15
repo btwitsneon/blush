@@ -222,8 +222,12 @@ main .content .cover .text h1.text-bottom {
     }
     main .content .cover .text h1,
     main .content .cover .text h1.text-bottom {
-        font-size: 4rem;
+        font-size: calc(3rem + 1vw);
         letter-spacing: -0.4rem;
+    }
+    main .scroll-ind .scroll {
+        width: 5rem;
+        height: 5rem;
     }
     main .content .cover .preview {
         width: 100%;
